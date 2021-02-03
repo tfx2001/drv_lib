@@ -1,0 +1,10 @@
+#if !defined(__DRV_CONFIG_H)
+#define __DRV_CONFIG_H
+
+
+#define USING_DRV_LIB @USING_DRV_LIB@
+
+#define MCU_USING_STM32 @MCU_USING_STM32@
+#define MCU_USING_STM32F1 @MCU_USING_STM32F1@
+
+#endif // __DRV_CONFIG_H
