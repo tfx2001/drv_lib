@@ -5,6 +5,7 @@
 
 #include "drv_config.h"
 
+#include "drv_common.h"
 #include "drv_gpio.h"
 
 void drv_lib_init(void);

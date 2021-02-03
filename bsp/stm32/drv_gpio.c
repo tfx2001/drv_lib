@@ -60,3 +60,10 @@ void gpio_write(drv_pin_t pin, uint8_t value) {
 uint8_t gpio_read(drv_pin_t pin) {
     return HAL_GPIO_ReadPin((GPIO_TypeDef *)pin.port, pin.pin);
 }
+
+// TODO: GPIO IRQ
+void gpio_attach_irq(drv_pin_t pin, uint32_t mode, void (*callback)(void *args), void *args) {
+}
+
+void gpio_irq_enable(drv_pin_t pin, bool enabled) {
+}

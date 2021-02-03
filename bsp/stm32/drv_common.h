@@ -2,6 +2,7 @@
 #define __DRV_COMMON_H
 
 #include <stdint.h>
+#include <stdbool.h>
 
 #include "drv_config.h"
 
@@ -12,5 +13,8 @@
 // clang-format on
 
 typedef uint32_t drv_base_t;
+
+void drv_delay(uint32_t ms);
+void drv_us_delay(uint32_t us);
 
 #endif  //__DRV_COMMON_H
