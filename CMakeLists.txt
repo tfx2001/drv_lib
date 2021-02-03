@@ -9,13 +9,8 @@ endif()
 include(${CMAKE_CURRENT_SOURCE_DIR}/drv_config.cmake)
 configure_file(drv_config.h.in ${CMAKE_CURRENT_BINARY_DIR}/drv_config.h)
 
-set(SOURCES "")
+add_library(drv_lib STATIC drv_lib.c)
+target_include_directories(drv_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} inc)
 
 include(bsp/bsp.cmake)
 include(peripheral/peripheral.cmake)
-
-list(APPEND SOURCES drv_lib.c)
-add_library(drv_lib STATIC ${SOURCES})
-
-get_property(DRV_LIB_INCLUDE DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY INCLUDE_DIRECTORIES)
-target_include_directories(drv_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} inc ${DRV_LIB_INCLUDE})
