@@ -1,11 +1,11 @@
 #if !defined(__DRV_GPIO_H)
 #define __DRV_GPIO_H
 
-#include "drv_common.h"
-
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+#include "drv_common.h"
 
 typedef struct {
     drv_base_t port;

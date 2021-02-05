@@ -1,6 +1,10 @@
 #if !defined(__MATRIX_KEYPAD)
 #define __MATRIX_KEYPAD
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "drv_lib.h"
 
 typedef struct {
@@ -10,5 +14,9 @@ typedef struct {
 
 void mat_keypad_init(mat_keypad_t keypad);
 void mat_keypad_get_key(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // __MATRIX_KEYPAD
