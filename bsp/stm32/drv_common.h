@@ -13,6 +13,8 @@ extern "C" {
 // clang-format off
 #if defined (MCU_USING_STM32F1)
   #include "stm32f1xx_hal.h"
+#elif defined (MCU_USING_STM32F4)
+  #include "stm32f4xx_hal.h"
 #endif
 // clang-format on
 
