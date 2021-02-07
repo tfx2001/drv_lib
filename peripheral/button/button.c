@@ -12,9 +12,9 @@ void button_set_cb(button_t *btn, void (*callback)(button_t *, button_event)) {
 }
 
 /**
- * @brief 矩阵键盘处理函数，需 10ms 调用一次
+ * @brief 按键处理函数，需 10ms 调用一次
  *
- * @param btn 矩阵键盘指针
+ * @param btn 按键指针
  */
 void button_handle(button_t *btn) {
     /* 检查回调函数指针 */
